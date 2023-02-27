@@ -1,0 +1,38 @@
+[style]
+# 使用 yapf 规范
+based_on_style = pep8
+# class 的文档前空一行
+blank_line_before_class_docstring = True
+# class 和 def 下面空一行
+blank_line_before_nested_class_or_def = True
+# 顶层函数周围间隔 2 行
+blank_lines_around_top_level_definition = 2
+# 在导入模块与正式的代码之间间隔 2 行
+blank_lines_between_top_level_imports_and_variables = 5
+# 将连续的括号放在一块，依赖 DEDENT_CLOSING_BRACKETS
+COALESCE_BRACKETS = True
+# 限制单行最多字数 120 个字符
+COLUMN_LIMIT = 120
+# 如果一行里超出字符数量限制，那么将右括号放在单独的行上
+DEDENT_CLOSING_BRACKETS = True
+# 缩进 2 个字符
+INDENT_WIDTH = 4
+# 内容短的代码合并为一行
+JOIN_MULTIPLE_LINES = True
+# 注释对齐的列的值，列位置小于 30 个字符的注释将在第 30 个字符上对齐，而后是 50、80
+SPACES_BEFORE_COMMENT = 30,50,80,100
+# 在以逗号结尾的参数列表和 )、] 和 } 之间插入一个空格
+SPACE_BETWEEN_ENDING_COMMA_AND_CLOSING_BRACKET = True
+# 如果带逗号的参数列表的长度适合它的起始行，那就不拆分
+SPLIT_ALL_TOP_LEVEL_COMMA_SEPARATED_VALUES = True
+# 如果一行里超出字符数量限制，在 &、| 或 ^ 前就换行
+SPLIT_BEFORE_BITWISE_OPERATOR = True
+# 如果一行里超出字符数量限制，在 +、-、*、/、// 或 @ 前就换行
+SPLIT_BEFORE_ARITHMETIC_OPERATOR = True
+# 如果一行里超出字符数量限制，那么列表或字典的参数在右括号之前拆分
+SPLIT_BEFORE_CLOSING_BRACKET = True
+# 如果一行里超出字符数量限制，那么在字典或集合生成器 (comp_for) 之前拆分 
+SPLIT_BEFORE_DICT_SET_GENERATOR = True
+# 将命名分配拆分到单独的行里
+SPLIT_COMPLEX_COMPREHENSION = True
+SPLIT_BEFORE_DOT=True
