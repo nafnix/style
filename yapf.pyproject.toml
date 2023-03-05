@@ -1,0 +1,91 @@
+[tool.yapf]
+based_on_style = "pep8"
+# class 或 def 前隔开一行
+BLANK_LINE_BEFORE_NESTED_CLASS_OR_DEF = true
+# 顶级函数或类定义周围间隔 2 行
+BLANK_LINES_AROUND_TOP_LEVEL_DEFINITION = 2
+# 顶级导入和 变量 定义之间间隔 2 行，不包括类和函数
+BLANK_LINES_BETWEEN_TOP_LEVEL_IMPORTS_AND_VARIABLES = 2
+# 不要拆分连续的括号，关联 DEDENT_CLOSING_BRACKETS 和 INDENT_CLOSING_BRACKETS
+COALESCE_BRACKETS = true
+# 每行限制字符 120 个
+COLUMN_LIMIT = 20
+# 连续对齐时，当需要换行才能表达时，换行后的表达式对齐的位置是上一行的相同层级表达式
+CONTINUATION_ALIGN_STYLE = "SPACE"
+# 续行时，相对当前行的缩进宽度
+CONTINUATION_INDENT_WIDTH = 4
+# 如果括号中的表达式占用了多行，就把右括号放在单独的行上
+DEDENT_CLOSING_BRACKETS = true
+# 如果列表 "," 结尾，则每个元素占一行
+DISABLE_ENDING_COMMA_HEURISTIC = false
+# 在不超过 COLUMN_LIMIT 的限制时，字典的元素不换行
+FORCE_MULTILINE_DICT = false
+# 当某行里有调用 i18n 函数时不格式化那一行
+I18N_FUNCTION_CALL = "i18n"
+# 如果字典键和值在一行时的行宽超过了 COLUMN_LIMIT，那么值换行并且缩进
+INDENT_DICTIONARY_VALUE = true
+# 缩进列数 4，最好是与 CONTINUATION_INDENT_WIDTH 相同
+INDENT_WIDTH = 4
+# 比如，对于函数内部的空行，使用带有缩进的空行，而不是单纯的空行，这里禁止这种行为
+INDENT_BLANK_LINES = false
+# 如果括号里的表达式不能在一行内表达完，那么禁止右括号和表达式对齐
+INDENT_CLOSING_BRACKETS = false
+# 如果代码合并起来不超过 COLUMN_LIMIT 的限制，那么合并他们
+JOIN_MULTIPLE_LINES = true
+# 乘方运算符 “××” 两边不用空格
+SPACES_AROUND_POWER_OPERATOR = false
+# 赋值运算符两边加空格
+SPACES_AROUND_DEFAULT_OR_NAMED_ASSIGN = true
+# 字典定界符前后不加空格
+SPACES_AROUND_DICT_DELIMITERS = false
+# 列表定界符前后不加空格
+SPACES_AROUND_LIST_DELIMITERS = false
+# 下标或是切片运算符前后加空格
+SPACES_AROUND_SUBSCRIPT_COLON = true
+# 元祖定界符前后不加空格
+SPACES_AROUND_TUPLE_DELIMITERS = false
+# 尾随注释前的空格数量，列位置小于 30 个字符的注释将在第 30 个字符上对齐，而后是 50、80、100
+SPACES_BEFORE_COMMENT = [30, 50, 80, 100]
+
+# 当 DISABLE_ENDING_COMMA_HEURISTIC 为 false 时不会生效
+# 列表、元组、集合、字典等类型的结尾如果是 ","，就与右括号之间插入一个空格
+# SPACE_BETWEEN_ENDING_COMMA_AND_CLOSING_BRACKET = false
+
+# 禁止括号左右两侧内部第一个字符是空格
+SPACE_INSIDE_BRACKETS = false
+
+# 当 DISABLE_ENDING_COMMA_HEURISTIC 为 false 时不会生效
+# 如果参数列表以 "," 结尾，那么每个参数占一行
+# SPLIT_ARGUMENTS_WHEN_COMMA_TERMINATED = true
+
+# 使用变体 SPLIT_ALL_TOP_LEVEL_COMMA_SEPARATED_VALUES
+# 如果以 "," 分隔的列表超出 COLUMN_LIMIT 的限制，那么每个元素占一行
+# SPLIT_ALL_COMMA_SEPARATED_VALUES = false
+
+
+# 如果带 "," 分隔的列表的元素长度超出 COLUMN_LIMIT 的限制，那么每个元素占一行
+# 如果其中元素的子表达式适合它的起始行，那就不拆分这个表达式
+SPLIT_ALL_TOP_LEVEL_COMMA_SEPARATED_VALUES = false
+# 元素如果超出 COLUMN_LIMIT 的限制，那么换行时，会以二进制运算符作为续行的开头
+SPLIT_BEFORE_BITWISE_OPERATOR = true
+# 元素如果超出 COLUMN_LIMIT 的限制，那么换行时，会以算术运算符作为续行的开头
+SPLIT_BEFORE_ARITHMETIC_OPERATOR = true
+# # 不知道
+# SPLIT_BEFORE_CLOSING_BRACKET = false
+# 不拆分字典或集合生成器
+SPLIT_BEFORE_DICT_SET_GENERATOR = false
+# 如果拆分包含 "." 运算符的表达式可以满足行宽，那么优先拆分
+SPLIT_BEFORE_DOT = true
+# 拆分参数列表时，第一个参数也换行
+SPLIT_BEFORE_FIRST_ARGUMENT = true
+# 在逻辑运算符前进行拆分
+SPLIT_BEFORE_LOGICAL_OPERATOR = true
+# 将命名参数拆分到新行
+SPLIT_BEFORE_NAMED_ASSIGNS = true
+# 有多个子句的表达式中的表达式拆分到单独的行
+SPLIT_COMPLEX_COMPREHENSION = true
+# 控制容器类型（如列表、字典）的当前行的长度如果超过了 120，则左括号换行
+SPLIT_PENALTY_AFTER_OPENING_BRACKET = 120
+
+[tool.yapfignore]
+ignore_patterns = [".venv/**/*.py"]
